@@ -30,6 +30,10 @@ _Avoid_: Insurer, administrator, company
 The date from which one Pension can be taken or starts paying, which each Pension has for itself, not the date the Owner plans to retire.
 _Avoid_: Retirement age, pension age
 
+**Closed Pension**:
+A Pension the Owner no longer holds, such as one transferred to another Provider or taken in full, kept with all its figures but not counted in any total.
+_Avoid_: Archived, inactive, deleted
+
 ### Figures
 
 **Valuation**:
@@ -39,6 +43,10 @@ _Avoid_: Balance, fund value, worth
 **Contribution**:
 One amount paid into a Pot Pension on a given date, whoever paid it, not a change in its value.
 _Avoid_: Payment, deposit, top-up
+
+**Growth**:
+How much a Pot Pension's value has changed since its first Valuation, leaving out the Contributions paid in since then, not its whole value.
+_Avoid_: Return, profit, gain
 
 **Income Forecast**:
 The yearly income an Income Pension promises from its Retirement Date, as its Provider states it on a given date.
@@ -51,6 +59,8 @@ _Avoid_: Projection, entitlement, benefit
 - A **Pension** is either a **Pot Pension** or an **Income Pension**, never both
 - A **Pot Pension** has zero or more **Valuations** and zero or more **Contributions**
 - An **Income Pension** has zero or more **Income Forecasts**
+- A **Pension** is either open or a **Closed Pension**; a **Closed Pension** keeps its figures but counts in no total
+- A **Pot Pension**'s **Growth** comes from its first and latest **Valuations** and the **Contributions** between them
 
 ## Example dialogue
 
