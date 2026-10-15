@@ -63,7 +63,7 @@ _Avoid_: Real terms, adjusted value, present value
 ### Moving figures
 
 **Export File**:
-A readable copy of every Pension and figure the Owner has recorded, in the one layout the app both writes and reads back, and the only copy not locked to the Owner's Windows account.
+A readable copy of every Pension, figure and Inflation Rate the Owner has recorded, in the one layout the app both writes and reads back, and the only copy not locked to the Owner's Windows account.
 _Avoid_: Backup, spreadsheet, CSV
 
 ## Relationships
@@ -76,7 +76,7 @@ _Avoid_: Backup, spreadsheet, CSV
 - A **Pension** is either open or a **Closed Pension**; a **Closed Pension** keeps its figures but counts in no total
 - A **Pot Pension**'s **Growth** comes from its first and latest **Valuations** and the **Contributions** between them
 - A **Valuation** or **Income Forecast** has a figure in **Today's Money** only when the Owner has an **Inflation Rate** for every year from its date to the latest year
-- An **Export File** holds every **Pension**, open and closed, with all its figures
+- An **Export File** holds every **Pension**, open and closed, with all its figures, and every **Inflation Rate**
 
 ## Example dialogue
 

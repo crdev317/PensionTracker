@@ -76,6 +76,7 @@ Pension Tracker is a simple Windows desktop app in which the Owner records each 
 41. Wherever a Valuation or Income Forecast is shown, the app also shows it in Today's Money, when the Owner has an Inflation Rate for every year from the figure's date to the latest year with one.
 42. Where a year's Inflation Rate is missing, the app shows no Today's Money figure and says which year is missing; it never assumes a rate.
 43. A Today's Money figure is always shown beside the recorded figure, never in its place.
+44. The Export File also carries every Inflation Rate the Owner has recorded, and an import restores them.
 
 ## Out of Scope
 
