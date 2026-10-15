@@ -20,6 +20,7 @@ Every later section of this contract is written for the Operating Context stated
 3. **Never lose or corrupt saved data.** A change to the stored format ships with a migration that reads the old format — the owner's history is the whole point of the app.
 4. **Keep it simple.** No feature, abstraction or dependency until a Story needs it; the standard library comes first — it is a one-person app, and every addition is upkeep.
 5. **No architectural change without an ADR.** Decisions stay traceable for future agents.
+6. **A change to many figures happens whole or not at all.** An import, a conversion or a delete that touches many of the owner's figures either completes or leaves every figure as it was — a half-applied change is a corrupted record.
 
 ## Frameworks
 - **Python 3.13** — the language and runtime; standard library only.
@@ -34,7 +35,8 @@ Every later section of this contract is written for the Operating Context stated
 
 ## Packages in use
 **UI:** `tkinter`, `tkinter.ttk`, `tkinter.messagebox`
-**Storage:** `json`, `pathlib`
+**Storage:** `json`, `pathlib`, `csv` (the Export File)
+**Windows data protection:** `ctypes`, to call Windows' per-user data protection (DPAPI) that locks saved figures to the owner's Windows account
 **Money:** `decimal.Decimal` for every amount — never `float`
 **Dates:** `datetime`
 **Logging:** `logging`, `logging.handlers.RotatingFileHandler`
