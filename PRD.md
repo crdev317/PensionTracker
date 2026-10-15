@@ -6,7 +6,7 @@ The Owner holds several Pensions with different Providers: Pot Pensions from pas
 
 ## Solution
 
-Pension Tracker is a simple Windows desktop app in which the Owner records each Pension they hold and the figures its Provider states: Valuations and Contributions for a Pot Pension, and Income Forecasts for an Income Pension. When the Owner opens the app, they see every open Pension with its latest figure, together with the total value of their pots and the total yearly income they have been promised. Opening a Pension shows its full history and, for a Pot Pension, its Growth. Everything stays on the Owner's own computer, and the app makes no estimates: it shows only the figures the Owner has recorded.
+Pension Tracker is a simple Windows desktop app in which the Owner records each Pension they hold and the figures its Provider states: Valuations and Contributions for a Pot Pension, and Income Forecasts for an Income Pension. When the Owner opens the app, they see every open Pension with its latest figure, together with the total value of their pots and the total yearly income they have been promised. Opening a Pension shows its full history and, for a Pot Pension, its Growth. Everything stays on the Owner's own computer, locked to their Windows account, and the Owner can export a readable copy of it all, or import one. The app makes no estimates: it shows only the figures the Owner has recorded, and those figures in Today's Money, worked out from the Inflation Rates the Owner enters.
 
 ## Requirements
 
@@ -55,13 +55,36 @@ Pension Tracker is a simple Windows desktop app in which the Owner records each 
 29. Everything the Owner records stays on their own computer: the app makes no network connection of any kind.
 30. The Owner's recorded figures are never lost when the app is updated to a new version.
 
+### Protecting the Owner's figures
+
+31. Everything the app saves is encrypted so that only the Owner's own Windows account on their computer can read it; the app asks for no password.
+32. If the app cannot read what it has saved, it stops and tells the Owner, and never replaces it with an empty record.
+
+### Export and import
+
+33. The Owner can export every Pension, open and closed, with all its figures, to an Export File saved where they choose.
+34. Before writing an Export File, the app warns the Owner that it is not encrypted.
+35. The Owner can import an Export File; importing into an app with nothing recorded restores everything the file holds.
+36. An import adds the Pensions and figures in the file to those already recorded, and skips any identical to one already recorded.
+37. If any line of the file cannot be read, the import adds nothing and tells the Owner which line is wrong.
+38. An Export File written by an earlier version of the app can still be imported.
+39. The Owner can lay out their own spreadsheet as an Export File and import it.
+
+### Inflation
+
+40. The Owner can record an Inflation Rate for each calendar year, and edit or delete it.
+41. Wherever a Valuation or Income Forecast is shown, the app also shows it in Today's Money, when the Owner has an Inflation Rate for every year from the figure's date to the latest year with one.
+42. Where a year's Inflation Rate is missing, the app shows no Today's Money figure and says which year is missing; it never assumes a rate.
+43. A Today's Money figure is always shown beside the recorded figure, never in its place.
+
 ## Out of Scope
 
 - Estimating the future value of a Pot Pension, or any projection of income or value.
-- Connecting to a Provider, importing statements, or checking figures against a Provider.
+- Connecting to a Provider, reading a Provider's statements, or checking figures against a Provider.
 - Splitting a Contribution by who paid it.
 - Charts.
 - Policy numbers, notes or attachments on a Pension.
-- Backing up the Owner's figures; the Owner's own computer backup covers them.
+- Automatic or scheduled backups; the Owner's computer backup covers the machine, and the Export File is the Owner's own readable copy.
+- Assumed rates of any kind, including a default Inflation Rate, and fetching inflation figures from outside the app.
 - More than one Owner, logins or passwords.
 - Running on anything other than Windows.

@@ -52,6 +52,20 @@ _Avoid_: Return, profit, gain
 The yearly income an Income Pension promises from its Retirement Date, as its Provider states it on a given date.
 _Avoid_: Projection, entitlement, benefit
 
+**Inflation Rate**:
+The rise in UK prices over one calendar year, as the Owner records it, not an assumed or forecast rate.
+_Avoid_: CPI, index, deflator
+
+**Today's Money**:
+A recorded figure restated at the prices of the latest year the Owner has an Inflation Rate for, shown beside the figure as recorded and never in its place.
+_Avoid_: Real terms, adjusted value, present value
+
+### Moving figures
+
+**Export File**:
+A readable copy of every Pension and figure the Owner has recorded, in the one layout the app both writes and reads back, and the only copy not locked to the Owner's Windows account.
+_Avoid_: Backup, spreadsheet, CSV
+
 ## Relationships
 
 - The **Owner** holds one or more **Pensions**
@@ -61,6 +75,8 @@ _Avoid_: Projection, entitlement, benefit
 - An **Income Pension** has zero or more **Income Forecasts**
 - A **Pension** is either open or a **Closed Pension**; a **Closed Pension** keeps its figures but counts in no total
 - A **Pot Pension**'s **Growth** comes from its first and latest **Valuations** and the **Contributions** between them
+- A **Valuation** or **Income Forecast** has a figure in **Today's Money** only when the Owner has an **Inflation Rate** for every year from its date to the latest year
+- An **Export File** holds every **Pension**, open and closed, with all its figures
 
 ## Example dialogue
 
@@ -76,3 +92,5 @@ _Avoid_: Projection, entitlement, benefit
 - "pot" was used both for any **Pension** and for the money in a **Pot Pension**. Resolved: **Pension** is the arrangement, and "pot" appears only inside the term **Pot Pension**.
 - "retirement date" could mean the date the Owner plans to retire or the date one **Pension** can be taken. Resolved: **Retirement Date** is always one **Pension**'s own date; the Owner's plan is not a term here.
 - "projection" could mean a **Provider**'s promised income or an estimate of a pot's future value. Resolved: the promise is an **Income Forecast**, and Pension Tracker makes no estimates.
+- "inflation-adjusted" could mean a past figure in today's prices or a future figure at an assumed rate. Resolved: it is only ever **Today's Money**, built from the Owner's own **Inflation Rates**; Pension Tracker assumes no rate.
+- "backup" was used for the **Export File**. Resolved: the **Export File** is the term; backing up the Owner's computer is not part of Pension Tracker.
