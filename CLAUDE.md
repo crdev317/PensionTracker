@@ -49,6 +49,7 @@ Authority order (earlier wins): **ADR > Technical-Context > Context.MD > Spec > 
 
 ## Dev commands
 
-<!-- TODO(init): fill once the stack is chosen — install / test tiers / run.
-     Written by /factory-init-tech-context or the first feature build. -->
-_Dev commands not set yet — filled when the stack is chosen (`/factory-init-tech-context`)._   <!-- filled per-product at init: install / test tiers / run -->
+- **Install:** nothing — Python 3.13 (`.python-version`), standard library only.
+- **Enable hooks (once per clone):** `git config core.hooksPath .githooks`
+- **Test (Tier 1):** `python -m unittest`
+- **Run:** set when the first Feature adds the app's entry point.
